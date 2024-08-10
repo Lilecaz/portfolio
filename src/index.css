@@ -23,6 +23,15 @@ code {
   color: white;
 }
 
+.home {
+  background: linear-gradient(to bottom left, #192A56, #12122B);
+}
+
+.atc {
+  background: linear-gradient(to bottom right, #192A56, #12122B);
+  color: white;
+}
+
 nav a {
   /* Styles pour les liens de navigation */
   text-decoration: none;
@@ -116,41 +125,4 @@ nav {
 
 .nav-link.active {
   @apply font-bold;
-}
-
-
-/* Style spécifique pour la page ATC */
-.atc-page {
-  @apply container mx-auto py-16;
-  /* Centre le contenu et ajoute des marges */
-}
-
-.atc-page h2 {
-  @apply text-4xl font-bold text-center text-white mb-4;
-  /* Grand titre, centré et en blanc */
-}
-
-.atc-page p {
-  @apply text-lg text-center text-gray-300 mb-8;
-  /* Texte de paragraphe centré et gris */
-}
-
-.atc-page ul {
-  @apply list-disc list-inside mx-auto max-w-prose;
-  /* Liste à puces centrée avec une largeur maximale */
-}
-
-.atc-page li {
-  @apply mb-2;
-  /* Espacement entre les éléments de la liste */
-}
-
-.atc-page a {
-  @apply text-blue-400 underline;
-  /* Liens en bleu avec soulignement */
-}
-
-.atc-page h3 {
-  @apply text-2xl font-semibold text-center text-white mb-4 mt-8;
-  /* Sous-titre, centré et en blanc */
 }

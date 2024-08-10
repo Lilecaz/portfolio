@@ -27,7 +27,7 @@ const Header = ({ Title }) => {
             transition={{ duration: 0.5 }}
         >
             <div className="container mx-auto py-4 flex justify-between items-center">
-                <h1 className="text-2xl font-bold">"{Title}" réalisé par Celil YILMAZ</h1>
+                <h1 className="text-2xl font-bold text-gray-900">"{Title}" Realisé par Celil YILMAZ</h1>
                 <nav>
                     <ul className="flex space-x-4 items-center">
                         <motion.li
