@@ -51,18 +51,18 @@ function Home() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 1 }}
-                className="flex flex-col items-center justify-center h-screen px-8 text-center"
+                className="flex flex-col items-center justify-center h-screen px-4 sm:px-8 text-center"
             >
-                <h1 className="text-6xl font-extrabold text-white mb-6 tracking-wide">Celil Yılmaz</h1>
-                <h2 className="text-3xl font-medium text-gray-300 mb-10">
+                <h1 className="text-4xl sm:text-6xl font-extrabold text-white mb-4 sm:mb-6 tracking-wide">Celil Yılmaz</h1>
+                <h2 className="text-xl sm:text-3xl font-medium text-gray-300 mb-6 sm:mb-10">
                     Ingénieur Logiciel et Management des Systèmes d'Information
                 </h2>
-                <p className="text-lg text-gray-400 mb-10">
+                <p className="text-base sm:text-lg text-gray-400 mb-6 sm:mb-10">
                     Passionné par le développement logiciel et l'innovation.
                 </p>
                 <a
                     href="#projets"
-                    className="bg-white text-indigo-900 px-6 py-3 rounded-full hover:bg-transparent hover:text-white border border-white transition duration-300 shadow-lg"
+                    className="bg-white text-indigo-900 px-4 sm:px-6 py-2 sm:py-3 rounded-full hover:bg-transparent hover:text-white border border-white transition duration-300 shadow-lg"
                     onClick={(e) => {
                         e.preventDefault();
                         const element = document.getElementById('projets');
@@ -80,11 +80,11 @@ function Home() {
                 transition={{ duration: 0.8, ease: "easeInOut" }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className={`container mx-auto py-16 ${isProjectsVisible ? 'show-projects' : ''}`}
+                className={`container mx-auto py-8 sm:py-16 ${isProjectsVisible ? 'show-projects' : ''}`}
                 id="projets"
             >
-                <h2 className="text-4xl font-bold text-secondary mb-12 text-center">Mes Projets</h2>
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+                <h2 className="text-2xl sm:text-4xl font-bold text-secondary mb-8 sm:mb-12 text-center">Mes Projets</h2>
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
                     {projects.map((project) => (
                         <motion.div
                             key={project.title}
@@ -97,7 +97,6 @@ function Home() {
                     ))}
                 </div>
             </motion.div>
-
         </div>
     );
 }
