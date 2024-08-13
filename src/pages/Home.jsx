@@ -1,14 +1,9 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import ProjectCard from '../components/ProjectCard';
-import Header from '../components/Header';
 
 function Home() {
-    const [isProjectsVisible, setIsProjectsVisible] = useState(false);
-
-    const handleShowProjects = () => {
-        setIsProjectsVisible(true);
-    };
+    const [isProjectsVisible] = useState(false);
 
     const projects = [
         {
