@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import ProjectCard from '../components/ProjectCard';
+import Header from '../components/Header';
 
 function Home() {
     const [isProjectsVisible, setIsProjectsVisible] = useState(false);
@@ -8,6 +9,7 @@ function Home() {
     const handleShowProjects = () => {
         setIsProjectsVisible(true);
     };
+
     const projects = [
         {
             title: 'ADM4U',
@@ -46,31 +48,37 @@ function Home() {
             link: '/projets/site-web-de-resultat-de-football',
         },
     ];
+
     return (
-        <div className="home min-h-screen bg-primary">
+        <div className="home min-h-screen bg-gradient-to-b from-primary via-accent to-secondary text-secondary">
             {/* Section 1: Présentation */}
             <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 1 }}
-                className="flex flex-col items-center justify-center h-screen px-8"
+                className="flex flex-col items-center justify-center h-screen px-8 text-center"
             >
-                <h1 className="text-4xl font-bold text-white mb-4">Celil Yılmaz</h1>
-                <h2 className="text-2xl font-medium text-white mb-8">
+                <h1 className="text-6xl font-extrabold text-white mb-6 tracking-wide">Celil Yılmaz</h1>
+                <h2 className="text-3xl font-medium text-gray-300 mb-10">
                     Ingénieur Logiciel et Management des Systèmes d'Information
                 </h2>
-                <p className="text-lg text-gray-300 mb-8">
+                <p className="text-lg text-gray-400 mb-10">
                     Passionné par le développement logiciel et l'innovation.
                 </p>
                 <a
                     href="#projets"
-                    className="bg-transparent border border-white px-4 py-2 rounded hover:bg-white hover:text-indigo-900 transition duration-300 "
-                    onClick={handleShowProjects}
+                    className="bg-white text-indigo-900 px-6 py-3 rounded-full hover:bg-transparent hover:text-white border border-white transition duration-300 shadow-lg"
+                    onClick={(e) => {
+                        e.preventDefault();
+                        const element = document.getElementById('projets');
+                        element.scrollIntoView({ behavior: 'smooth' });
+                    }}
                 >
                     Voir mes projets
                 </a>
             </motion.div>
 
+            {/* Section 2: Projets */}
             <motion.div
                 initial={{ opacity: 0, y: 100 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -80,18 +88,23 @@ function Home() {
                 className={`container mx-auto py-16 ${isProjectsVisible ? 'show-projects' : ''}`}
                 id="projets"
             >
-                <h2 className="text-3xl font-bold text-white mb-8">Projets</h2>
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                <h2 className="text-4xl font-bold text-secondary mb-12 text-center">Mes Projets</h2>
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
                     {projects.map((project) => (
-                        <ProjectCard key={project.title} {...project}
-                        />
+                        <motion.div
+                            key={project.title}
+                            className="shadow-lg rounded-lg overflow-hidden"
+                            whileHover={{ scale: 1.05 }}
+                            transition={{ duration: 0.3 }}
+                        >
+                            <ProjectCard {...project} />
+                        </motion.div>
                     ))}
                 </div>
             </motion.div>
+
         </div>
     );
 }
-
-
 
 export default Home;

@@ -1,6 +1,5 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import Header from '../../components/Header';
 
 const ATC = () => {
     return (
@@ -10,7 +9,6 @@ const ATC = () => {
             transition={{ duration: 1 }}
             className="atc min-h-screen bg-gray-900 text-white"
         >
-            <Header Title={"Contrôleur de trafic aérien"} />
             <div className="container mx-auto py-16">
                 <h2 className="text-4xl font-bold mb-4 text-center">Projet : Contrôleur de trafic aérien</h2>
                 <p className="text-lg mb-8 text-center">

@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { HomeIcon, ChevronDownIcon, ChevronUpIcon } from '@heroicons/react/16/solid';
+import { HomeIcon, ChevronDownIcon, ChevronUpIcon } from '@heroicons/react/24/solid';
 
-const Header = ({ Title }) => {
+const Header = () => {
     const [isProjectsMenuOpen, setIsProjectsMenuOpen] = useState(false);
 
     const toggleProjectsMenu = () => {
@@ -21,21 +21,22 @@ const Header = ({ Title }) => {
 
     return (
         <motion.header
-            className="bg-white shadow"
+            className="bg-primary shadow-lg"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5 }}
         >
             <div className="container mx-auto py-4 flex justify-between items-center">
-                <h1 className="text-2xl font-bold text-gray-900">"{Title}" Realisé par Celil YILMAZ</h1>
+                <h1 className="text-2xl font-bold text-secondary">Celil Yılmaz</h1>
                 <nav>
-                    <ul className="flex space-x-4 items-center">
+                    <ul className="flex space-x-6">
                         <motion.li
                             whileHover={{ scale: 1.1 }}
                             whileTap={{ scale: 0.9 }}
                         >
-                            <NavLink to="/" className="text-gray-900 hover:text-indigo-900" activeClassName="font-bold">
-                                <HomeIcon className="h-6 w-6" />
+                            <NavLink to="/" className="text-secondary hover:text-gray-400">
+                                <HomeIcon className="h-6 w-6 inline-block mr-2" />
+                                Accueil
                             </NavLink>
                         </motion.li>
                         <motion.li
@@ -43,7 +44,7 @@ const Header = ({ Title }) => {
                             whileTap={{ scale: 0.9 }}
                             className="relative"
                         >
-                            <button onClick={toggleProjectsMenu} className="text-gray-900 hover:text-indigo-900 flex items-center">
+                            <button onClick={toggleProjectsMenu} className="text-secondary hover:text-gray-400 flex items-center">
                                 Projets {isProjectsMenuOpen ? <ChevronUpIcon className="h-4 w-4 ml-1" /> : <ChevronDownIcon className="h-4 w-4 ml-1" />}
                             </button>
                             <AnimatePresence>
@@ -52,7 +53,7 @@ const Header = ({ Title }) => {
                                         initial={{ opacity: 0, y: -10 }}
                                         animate={{ opacity: 1, y: 0 }}
                                         exit={{ opacity: 0, y: -10 }}
-                                        className="absolute top-full left-0 mt-2 w-48 bg-white shadow-lg rounded-md"
+                                        className="absolute top-full left-0 mt-2 w-48 bg-secondary text-primary shadow-lg rounded-md"
                                     >
                                         {projects.map((project) => (
                                             <motion.li
@@ -61,8 +62,7 @@ const Header = ({ Title }) => {
                                             >
                                                 <NavLink
                                                     to={project.link}
-                                                    className="block px-4 py-2 text-gray-900 hover:text-indigo-900"
-                                                    activeClassName="font-bold"
+                                                    className="block px-4 py-2 hover:text-indigo-900"
                                                     onClick={() => setIsProjectsMenuOpen(false)}
                                                 >
                                                     {project.title}
@@ -77,15 +77,7 @@ const Header = ({ Title }) => {
                             whileHover={{ scale: 1.1 }}
                             whileTap={{ scale: 0.9 }}
                         >
-                            <NavLink to="/projets/adm4u/a-propos" className="text-gray-900 hover:text-indigo-900" activeClassName="font-bold">
-                                À propos
-                            </NavLink>
-                        </motion.li>
-                        <motion.li
-                            whileHover={{ scale: 1.1 }}
-                            whileTap={{ scale: 0.9 }}
-                        >
-                            <NavLink to="/projets/adm4u/contact" className="text-gray-900 hover:text-indigo-900" activeClassName="font-bold">
+                            <NavLink to="/contact" className="text-secondary hover:text-gray-400">
                                 Contact
                             </NavLink>
                         </motion.li>

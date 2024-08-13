@@ -1,7 +1,5 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import Header from '../../components/Header';
-import { ChevronLeftIcon } from '@heroicons/react/16/solid';
 
 
 const Adm4u = () => {
@@ -12,7 +10,6 @@ const Adm4u = () => {
             transition={{ duration: 1 }}
             className="min-h-screen bg-primary flex flex-col"
         >
-            <Header Title={"ADM4U"} />
             <main className="adm4u flex-grow">
                 <Content />
             </main>
@@ -50,18 +47,6 @@ const Content = () => {
                     <li>GitHub</li>
                     <li>Scripts Shell</li>
                 </ul>
-
-                <motion.NavLink
-                    to="/"
-                    className="flex items-center text-white bg-blue-500 hover:bg-blue-700 px-4 py-2 rounded"
-                    initial={{ scale: 0 }}
-                    animate={{ scale: 1 }}
-                    transition={{ duration: 0.5 }}
-                >
-                    <ChevronLeftIcon className="h-6 w-6 mr-2" />
-                    Retour à l'accueil
-                </motion.NavLink>
-
             </motion.div>
         </div>
     );
