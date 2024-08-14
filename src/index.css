@@ -30,6 +30,13 @@ code {
   }
 }
 
+.salle-de-sport {
+  background: linear-gradient(to bottom right, #192A56, #12122B);
+  color: white;
+}
+
+/* Ajout d'autres styles communs si nécessaire */
+
 .adm4u {
   background: linear-gradient(to bottom right, #192A56, #12122B);
   color: white;

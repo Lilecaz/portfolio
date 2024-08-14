@@ -6,6 +6,7 @@ import Adm4u from './pages/projets/adm4u';
 import ATC from './pages/projets/atc';
 import ScrollToTop from './components/ScrollToTop';
 import Header from './components/Header';
+import Sports from './pages/projets/sports';
 import Footer from './components/Footer';
 // import Projects from './pages/Projects';
 // import Contact from './pages/Contact';
@@ -18,6 +19,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/projets/adm4u" element={<Adm4u />} />
         <Route path="/projets/atc" element={<ATC />} />
+        <Route path='/projets/sports' element={<Sports />} />
         {/* <Route path="/about" element={<About />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/contact" element={<Contact />} /> */}

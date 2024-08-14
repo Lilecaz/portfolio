@@ -22,10 +22,10 @@ const Header = () => {
     const projects = [
         { title: 'ADM4U', link: '/projets/adm4u' },
         { title: 'Air Traffic Controller', link: '/projets/atc' },
-        { title: 'Salle de sport', link: '/projets/salle-de-sport' },
-        { title: 'Artificial Intelligence', link: '/projets/artificial-intelligence' },
-        { title: 'Simulateur de tournoi sportif', link: '/projets/simulateur-de-tournoi-sportif' },
-        { title: 'Site web de résultat de Football', link: '/projets/site-web-de-resultat-de-football' },
+        { title: 'Salle de sport', link: '/projets/sports' },
+        { title: 'Artificial Intelligence', link: '/projets/ia' },
+        { title: 'Simulateur de tournoi sportif', link: '/projets/tournoi' },
+        { title: 'Site web de résultat de Football', link: '/projets/football' },
     ];
 
     return (
@@ -37,7 +37,7 @@ const Header = () => {
         >
             <div className="container mx-auto py-4 flex items-center justify-between">
                 <h1 className="text-2xl font-bold text-secondary">Celil Yılmaz</h1>
-                <div className="hidden md:flex space-x-6">
+                <ul className="hidden md:flex space-x-6">
                     <motion.li
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.9 }}
@@ -89,7 +89,7 @@ const Header = () => {
                             Contact
                         </NavLink>
                     </motion.li>
-                </div>
+                </ul>
                 <button onClick={toggleMenu} className="md:hidden text-secondary">
                     {isMenuOpen ? <XMarkIcon className="h-6 w-6" /> : <Bars3Icon className="h-6 w-6" />}
                 </button>

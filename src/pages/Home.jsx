@@ -22,25 +22,25 @@ function Home() {
             title: 'Salle de sport',
             description: 'Échange réseau entre serveur Python et client Java',
             technologies: 'Java, Python, sockets, base de données PostgreSQL',
-            link: '/projets/salle-de-sport',
+            link: '/projets/sports',
         },
         {
             title: 'Artificial Intelligence',
             description: 'Logiciel expliquant des algorithmes d\'IA',
             technologies: 'Java, Github',
-            link: '/projets/artificial-intelligence',
+            link: '/projets/ia',
         },
         {
             title: 'Simulateur de tournoi sportif',
             description: 'Gestion de tournoi de football avec Multi-Threading (C)',
             technologies: 'Langage C',
-            link: '/projets/simulateur-de-tournoi-sportif',
+            link: '/projets/tournoi',
         },
         {
             title: 'Site web de résultat de Football',
             description: 'Consultation des résultats de matchs en temps réel',
             technologies: 'HTML, CSS, PHP, JavaScript',
-            link: '/projets/site-web-de-resultat-de-football',
+            link: '/projets/football',
         },
     ];
 
