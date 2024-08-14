@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
+import Contact from './pages/contact';
 import './App.css';
 import Adm4u from './pages/projets/adm4u';
 import ATC from './pages/projets/atc';
@@ -23,8 +24,8 @@ function App() {
         <Route path='/projets/sports' element={<Sports />} />
         <Route path='/projets/ia' element={<IA />} />
         {/* <Route path="/about" element={<About />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/contact" element={<Contact />} /> */}
+        <Route path="/projects" element={<Projects />} />*/}
+        <Route path="/contact" element={<Contact />} />
       </Routes>
       <ScrollToTop />
       <Footer />

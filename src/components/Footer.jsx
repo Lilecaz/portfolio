@@ -15,7 +15,7 @@ const Footer = () => {
                     Étudiant en informatique à L'ESIEE-IT.
                 </p>
                 <p className="text-center text-sm sm:text-base mb-2 sm:mb-4">
-                    Master en Ingénierie Informatique et Management des systèmes d'information spécialité Génie Logiciel et Innovation numérique
+                    2eme année de Master en Ingénierie Informatique et Management des systèmes d'information spécialité Génie Logiciel et Innovation numérique
                 </p>
                 <a href="mailto:lilecaz0090@gmail.com" className="flex items-center mt-2 sm:mt-4">
                     <span className="text-sm sm:text-xl">
