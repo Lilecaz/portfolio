@@ -26,6 +26,7 @@ const Header = () => {
         { title: 'Artificial Intelligence', link: '/projets/ia' },
         { title: 'Simulateur de tournoi sportif', link: '/projets/tournoi' },
         { title: 'Site web de résultat de Football', link: '/projets/football' },
+        { title: 'Fashion E-commerce', link: '/projets/fashion' },
     ];
 
     return (

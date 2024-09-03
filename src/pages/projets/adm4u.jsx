@@ -1,6 +1,6 @@
+// Adm4u.js
 import React from 'react';
 import { motion } from 'framer-motion';
-
 
 const Adm4u = () => {
     return (
@@ -8,47 +8,53 @@ const Adm4u = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1 }}
-            className="min-h-screen bg-primary flex flex-col"
+            className="adm4u min-h-screen bg-gray-900 text-white"
         >
-            <main className="adm4u flex-grow">
-                <Content />
-            </main>
-        </motion.div>
-    );
-};
-
-const Content = () => {
-    return (
-        <div className="container mx-auto py-16">
-            <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 1 }}
-                className="flex flex-col items-center justify-center h-screen px-8"
-            >
-                <h1 className="text-4xl font-bold text-white mb-4">ADM4U</h1>
-                <h2 className="text-2xl font-semibold text-white mb-4">Création d'un logiciel d'automatisation & sécurisation de tâches SAP</h2>
-                <p className="text-gray-300 text-center mb-8">
-                    ADM4U (Administration for you) automatise et sécurise plusieurs tâches réalisées par les administrateurs SAP, améliorant ainsi l'efficacité et la fiabilité des opérations. En réduisant les erreurs humaines et en optimisant les processus, ADM4U contribue à une meilleure gestion des systèmes SAP, permettant aux équipes IT de se concentrer sur des tâches à plus haute valeur ajoutée.
+            <div className="container mx-auto py-16">
+                <h2 className="text-4xl font-bold mb-4 text-center">Projet : ADM4U</h2>
+                <p className="text-lg mb-8 text-center">
+                    ADM4U (Administration for You) est un logiciel qui automatise et sécurise plusieurs tâches administratives réalisées sur les systèmes SAP, améliorant ainsi l'efficacité et la fiabilité des opérations. Ce projet permet de réduire les erreurs humaines et d'optimiser les processus, libérant ainsi les équipes IT pour des tâches à plus haute valeur ajoutée.
                 </p>
 
+                {/* Section pour l'image (si disponible) */}
+                {/* <div className="flex justify-center mb-8">
+                    <img
+                        src="/images/adm4u.png"
+                        alt="Aperçu de ADM4U"
+                        className="w-full max-w-2xl rounded shadow-lg"
+                    />
+                </div> */}
 
-                <h3 className="text-xl font-semibold text-white mb-4">Fonctionnalités clés</h3>
-                <ul className="text-gray-300 text-center mb-8">
-                    <li>Monitoring de la disponibilité des instances SAP & Hana</li>
-                    <li>Installation automatique des bases Hana</li>
-                    <li>Upgrade Hana & Kernel SAP</li>
-                    <li>Refresh automatique SAP avec export/import des tables</li>
+                <h3 className="text-2xl font-semibold mb-4 mt-8 text-center">Fonctionnalités détaillées</h3>
+                <p className="text-lg mb-8 text-center">
+                    ADM4U propose plusieurs fonctionnalités clés pour la gestion et l'automatisation des tâches SAP :
+                </p>
+                <ul className="list-disc list-inside mx-auto max-w-prose">
+                    <li><strong>Monitoring :</strong> Suivi de la disponibilité des instances SAP & Hana pour assurer une performance optimale.</li>
+                    <li><strong>Installation automatique :</strong> Déploiement automatisé des bases de données Hana pour réduire les temps d'installation.</li>
+                    <li><strong>Mises à jour :</strong> Automatisation des mises à jour de Hana et du Kernel SAP pour garantir un environnement à jour et sécurisé.</li>
+                    <li><strong>Rafraîchissement SAP :</strong> Réalisation de rafraîchissements automatiques de SAP avec export/import des tables pour une gestion simplifiée des données.</li>
                 </ul>
 
-                <h3 className="text-xl font-semibold text-white mb-4">Technologies utilisées</h3>
-                <ul className="text-gray-300 text-center mb-8">
-                    <li>JavaScript (Electron-JS/React)</li>
-                    <li>GitHub</li>
-                    <li>Scripts Shell</li>
+                <h3 className="text-2xl font-semibold mb-4 mt-8 text-center">Technologies utilisées</h3>
+                <ul className="list-disc list-inside mx-auto max-w-prose">
+                    <li>JavaScript (Electron-JS/React) : pour la création de l'interface utilisateur et l'interaction avec le système.</li>
+                    <li>GitHub : pour la gestion de version et la collaboration en équipe.</li>
+                    <li>Scripts Shell : pour l'automatisation des tâches de maintenance et de mise à jour des systèmes.</li>
                 </ul>
-            </motion.div>
-        </div>
+
+                <h3 className="text-2xl font-semibold mb-4 mt-8 text-center">Apports</h3>
+                <p className="text-lg mb-8 text-center">
+                    Ce projet m'a permis de développer mes compétences en :
+                </p>
+                <ul className="list-disc list-inside mx-auto max-w-prose">
+                    <li>Automatisation de processus complexes via scripting et programmation.</li>
+                    <li>Développement d'interfaces utilisateur intuitives avec Electron-JS et React.</li>
+                    <li>Gestion de versions et collaboration avec GitHub.</li>
+                    <li>Amélioration des performances et de la sécurité des systèmes SAP.</li>
+                </ul>
+            </div>
+        </motion.div>
     );
 };
 

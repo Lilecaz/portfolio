@@ -42,6 +42,12 @@ function Home() {
             technologies: 'HTML, CSS, PHP, JavaScript',
             link: '/projets/football',
         },
+        {
+            title: 'Fashion E-commerce',
+            description: 'Site web de vente de vêtements en ligne',
+            technologies: 'HTML, CSS, JavaScript(React, Express, nodeJS), MongoDB',
+            link: '/projets/fashion',
+        },
     ];
 
     return (

@@ -10,8 +10,10 @@ import Header from './components/Header';
 import Sports from './pages/projets/sports';
 import IA from './pages/projets/ia';
 import Footer from './components/Footer';
-// import Projects from './pages/Projects';
-// import Contact from './pages/Contact';
+import Tournament from './pages/projets/tournament';
+import FashionEcommerce from './pages/projets/fashion';
+import Football from './pages/projets/football';
+import Construction from './pages/Construction';
 
 function App() {
   return (
@@ -23,9 +25,11 @@ function App() {
         <Route path="/projets/atc" element={<ATC />} />
         <Route path='/projets/sports' element={<Sports />} />
         <Route path='/projets/ia' element={<IA />} />
-        {/* <Route path="/about" element={<About />} />
-        <Route path="/projects" element={<Projects />} />*/}
+        <Route path='/projets/football' element={<Football />} />
+        <Route path='/projets/tournoi' element={<Tournament />} />
+        <Route path='/projets/fashion' element={<FashionEcommerce />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="*" element={<Construction />} />
       </Routes>
       <ScrollToTop />
       <Footer />

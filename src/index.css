@@ -19,8 +19,10 @@ code {
 }
 
 @media (max-width: 640px) {
+  .container {
+    padding: 0 1rem;
+  }
 
-  /* Styles spécifiques pour les écrans jusqu'à 640px */
   .header {
     font-size: 1.5rem;
   }
@@ -35,10 +37,18 @@ code {
   color: white;
 }
 
-/* Ajout d'autres styles communs si nécessaire */
 
 .adm4u {
   background: linear-gradient(to bottom right, #192A56, #12122B);
+  color: white;
+}
+
+.tournament {
+  background: linear-gradient(to bottom left, #192A56, #12122B);
+}
+
+.football {
+  background: linear-gradient(to top left, #192A56, #12122B);
   color: white;
 }
 
