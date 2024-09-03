@@ -1,8 +1,18 @@
-// FashionEcommerce.js
 import React from 'react';
+import axios from 'axios';
 import { motion } from 'framer-motion';
 
 const FashionEcommerce = () => {
+    const handleStartEcommerce = async () => {
+        try {
+            await axios.post('http://localhost:5001/api/start-ecommerce');
+            alert('Le projet e-commerce est en cours de démarrage...');
+        } catch (error) {
+            console.error('Erreur lors du démarrage du projet e-commerce:', error);
+            alert('Erreur lors du démarrage du projet e-commerce.');
+        }
+    };
+
     return (
         <motion.div
             initial={{ opacity: 0 }}
@@ -15,15 +25,6 @@ const FashionEcommerce = () => {
                 <p className="text-lg mb-8 text-center">
                     Ce projet consistait à créer un site e-commerce pour vendre des vêtements de mode pour femmes, en mettant l'accent sur les robes. Le site permet aux utilisateurs de parcourir les collections, de consulter les détails des produits et de finaliser leurs achats en ligne.
                 </p>
-
-                {/* Section pour l'image (si disponible) */}
-                {/* <div className="flex justify-center mb-8">
-                    <img
-                        src="/images/fashion-ecommerce.png"
-                        alt="Aperçu du site e-commerce de mode"
-                        className="w-full max-w-2xl rounded shadow-lg"
-                    />
-                </div> */}
 
                 <h3 className="text-2xl font-semibold mb-4 mt-8 text-center">Fonctionnalités détaillées</h3>
                 <p className="text-lg mb-8 text-center">
@@ -40,7 +41,7 @@ const FashionEcommerce = () => {
                 <ul className="list-disc list-inside mx-auto max-w-prose">
                     <li>React.js : pour le front-end et l'interface utilisateur.</li>
                     <li>Node.js et Express : pour le back-end, la gestion des requêtes et des données.</li>
-                    <li>Base de données : pour stocker les informations sur les produits, les utilisateurs et les commandes.</li>
+                    <li>MongoDB : pour stocker les informations sur les produits, les utilisateurs et les commandes.</li>
                 </ul>
 
                 <h3 className="text-2xl font-semibold mb-4 mt-8 text-center">Apports</h3>
@@ -57,15 +58,13 @@ const FashionEcommerce = () => {
                 <p className="text-lg mb-8 text-center">
                     Vous pouvez visiter le site de démonstration en cliquant sur le lien ci-dessous :
                 </p>
-                <div className="flex justify-center">
-                    <a
-                        href="/otherSites/react-goragavira/index.html"
-                        target="_blank"
-                        rel="noopener noreferrer"
+                <div className="flex justify-center mb-8">
+                    <button
+                        onClick={handleStartEcommerce}
                         className="bg-blue-500 text-white px-6 py-3 rounded shadow hover:bg-blue-600 transition duration-300"
                     >
-                        Visiter le Site E-commerce
-                    </a>
+                        Démarrer le Site E-commerce
+                    </button>
                 </div>
             </div>
         </motion.div>
