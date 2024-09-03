@@ -1,0 +1,3 @@
+[submodule "src/otherSites/react-goragavira"]
+    path = src/otherSites/react-goragavira
+    url = https://github.com/Lilecaz/react-goragavira
